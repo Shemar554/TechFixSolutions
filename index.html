@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>TechFix Solutions | PC & Electronic Repair in San Antonio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Fast, reliable, and affordable PC and electronic repair services in San Antonio, TX. Free diagnostics, transparent pricing, and a 30-day guarantee.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background-color: #f4f4f4;
+      color: #111827;
+      line-height: 1.5;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    header {
+      background-color: #111827;
+      color: #f9fafb;
+      padding: 1rem 1.5rem;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .logo-circle {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #38bdf8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: #111827;
+      font-size: 0.95rem;
+    }
+
+    .logo-text {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+      font-size: 0.95rem;
+      flex-wrap: wrap;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #1f2937, #111827);
+      color: #f9fafb;
+      padding: 3rem 1.5rem 4rem;
+    }
+
+    .hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: 2.3rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-highlight {
+      color: #38bdf8;
+      font-weight: bold;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .btn-primary {
+      background-color: #38bdf8;
+      color: #111827;
+      padding: 0.7rem 1.3rem;
+      border-radius: 999px;
+      font-weight: bold;
+      font-size: 0.95rem;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-secondary {
+      background-color: transparent;
+      border: 1px solid #9ca3af;
+      color: #e5e7eb;
+      padding: 0.7rem 1.3rem;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      cursor: pointer;
+    }
+
+    .btn-primary:hover,
+    .btn-secondary:hover {
+      opacity: 0.9;
+    }
+
+    .hero-card {
+      background-color: #111827;
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+      font-size: 0.95rem;
+    }
+
+    .hero-card h2 {
+      font-size: 1.2rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-card ul {
+      margin-left: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-card ul li {
+      margin-bottom: 0.3rem;
+    }
+
+    .section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem;
+    }
+
+    .section h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .section p.section-intro {
+      max-width: 680px;
+      margin: 0 auto 1.5rem;
+      text-align: center;
+      font-size: 0.98rem;
+      color: #4b5563;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .card {
+      background-color: #ffffff;
+      border-radius: 0.75rem;
+      padding: 1.25rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      font-size: 0.95rem;
+    }
+
+    .card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .card ul {
+      margin-left: 1.1rem;
+    }
+
+    .card ul li {
+      margin-bottom: 0.25rem;
+    }
+
+    .two-column {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 1.5rem;
+      align-items: start;
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 0.8rem;
+      background-color: #e5f3ff;
+      color: #1d4ed8;
+      padding: 0.2rem 0.6rem;
+      border-radius: 999px;
+      margin-bottom: 0.5rem;
+    }
+
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      font-size: 0.9rem;
+    }
+
+    .quote {
+      font-style: italic;
+      margin-bottom: 0.5rem;
+    }
+
+    .name {
+      font-weight: bold;
+      color: #111827;
+    }
+
+    .contact-box {
+      background-color: #ffffff;
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      max-width: 600px;
+      margin: 0 auto;
+      font-size: 0.95rem;
+    }
+
+    .contact-box p {
+      margin-bottom: 0.5rem;
+    }
+
+    .faq-item {
+      margin-bottom: 1rem;
+    }
+
+    .faq-item h3 {
+      font-size: 1rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .references {
+      background-color: #ffffff;
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      font-size: 0.9rem;
+      max-width: 900px;
+      margin: 0 auto 2.5rem;
+    }
+
+    .references h2 {
+      text-align: left;
+      margin-bottom: 0.75rem;
+    }
+
+    .references p {
+      margin-bottom: 0.4rem;
+    }
+
+    footer {
+      background-color: #111827;
+      color: #9ca3af;
+      padding: 1.5rem;
+      font-size: 0.85rem;
+    }
+
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+    }
+
+    @media (max-width: 900px) {
+      .hero-inner,
+      .two-column {
+        grid-template-columns: 1fr;
+      }
+
+      .grid-3,
+      .testimonials {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 1.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <div class="nav-container" aria-label="Main navigation">
+      <div class="logo-area">
+        <div class="logo-circle" aria-hidden="true">TF</div>
+        <div class="logo-text">TechFix Solutions</div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About &amp; Mission</a></li>
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#references">References</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero" aria-labelledby="hero-heading">
+    <div class="hero-inner">
+      <div>
+        <h1 id="hero-heading">
+          Fast, Reliable PC &amp; Electronic Repair in
+          <span class="hero-highlight">San Antonio, TX</span>
+        </h1>
+        <p>
+          Is your computer, tablet, or gaming device slowing you down?
+          In today’s digital world, even a small issue can disrupt work, school, or everyday life.
+          TechFix Solutions provides fast, affordable repair services so you can get back to what matters most.
+        </p>
+        <div class="hero-buttons">
+          <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+            Schedule a Repair
+          </button>
+          <button class="btn-secondary" onclick="document.getElementById('services').scrollIntoView({behavior: 'smooth'})">
+            View Services
+          </button>
+        </div>
+      </div>
+      <div class="hero-card" aria-label="Why people choose TechFix Solutions">
+        <h2>Why People Choose TechFix Solutions</h2>
+        <ul>
+          <li>Free diagnostic check with every repair</li>
+          <li>Same-day repair options for common issues</li>
+          <li>Affordable pricing with no hidden fees</li>
+          <li>High-quality replacement parts</li>
+          <li>30-day service guarantee on repair work</li>
+        </ul>
+        <p>
+          Trusted by students, professionals, families, and small businesses across San Antonio.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES SECTION -->
+  <section id="services" class="section" aria-labelledby="services-heading">
+    <h2 id="services-heading">Our Repair Services</h2>
+    <p class="section-intro">
+      We specialize in helping everyday users get back to work, school, gaming, and life
+      with dependable repairs you can trust.
+    </p>
+
+    <div class="grid-3">
+      <div class="card">
+        <h3>Computer &amp; Laptop Repair</h3>
+        <ul>
+          <li>Slow performance and freezing</li>
+          <li>Startup and boot issues</li>
+          <li>Hardware upgrades and replacements</li>
+          <li>Cracked or flickering screens</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Phone &amp; Tablet Repair</h3>
+        <ul>
+          <li>Cracked or damaged screens</li>
+          <li>Battery and charging problems</li>
+          <li>Software glitches and app issues</li>
+          <li>Help deciding whether to repair or replace</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Home Electronics &amp; Gaming</h3>
+        <ul>
+          <li>Console and gaming PC issues</li>
+          <li>Overheating and noise problems</li>
+          <li>Performance optimization and cleanup</li>
+          <li>Repairs that help extend device life</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT / MISSION SECTION -->
+  <section id="about" class="section" style="background-color: #e5e7eb;" aria-labelledby="about-heading">
+    <div class="two-column">
+      <div>
+        <span class="badge">About TechFix Solutions</span>
+        <h2 id="about-heading">Our Story &amp; Mission</h2>
+        <p style="margin: 0.75rem 0;">
+          TechFix Solutions is a local PC and electronics repair service dedicated to helping students, professionals,
+          families, and small businesses in San Antonio. We focus on honest communication, clear explanations,
+          and high-quality repair work.
+        </p>
+        <p style="margin-bottom: 0.75rem;">
+          <strong>Our mission</strong> is to provide trustworthy, high-quality repair services that restore your technology
+          and your peace of mind. We want every customer to understand what went wrong, what we are doing to fix it,
+          and how to prevent the problem from happening again.
+        </p>
+        <p>
+          As more of life depends on technology and connected devices, keeping your equipment working well is more
+          important than ever. Whether you rely on your device for online classes, remote work, business tasks, or
+          staying in touch with family, we’re here to keep your technology running smoothly.
+        </p>
+      </div>
+      <div>
+        <div class="card" aria-label="What makes TechFix Solutions different">
+          <h3>What Makes Us Different</h3>
+          <ul>
+            <li>Local, owner-operated business</li>
+            <li>Clear explanations before any repair</li>
+            <li>Options tailored to your budget</li>
+            <li>Friendly support by phone, email, or in person</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS SECTION -->
+  <section id="how-it-works" class="section" aria-labelledby="how-heading">
+    <h2 id="how-heading">How It Works</h2>
+    <p class="section-intro">
+      Getting your device fixed is simple. Here’s what to expect when you choose TechFix Solutions.
+    </p>
+
+    <div class="grid-3">
+      <div class="card">
+        <h3>1. Free Diagnostic</h3>
+        <p>
+          Bring in your device or contact us online. We’ll run a free diagnostic so you know exactly what’s wrong
+          before you decide on a repair.
+        </p>
+      </div>
+      <div class="card">
+        <h3>2. Clear Repair Plan</h3>
+        <p>
+          We explain the problem in plain language, share your options, and give you transparent pricing with no hidden fees.
+        </p>
+      </div>
+      <div class="card">
+        <h3>3. Fast, Guaranteed Fix</h3>
+        <p>
+          Our technicians complete the repair, often the same day, using quality parts and backing the work
+          with a 30-day service guarantee.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS SECTION -->
+  <section class="section" style="background-color: #f9fafb;" aria-labelledby="testimonials-heading">
+    <h2 id="testimonials-heading">What Our Customers Say</h2>
+    <p class="section-intro">
+      Real feedback from people in the San Antonio area who trusted TechFix Solutions with their devices.
+    </p>
+
+    <div class="testimonials">
+      <div class="card">
+        <p class="quote">
+          “TechFix Solutions fixed my laptop the same day and explained everything in simple terms.
+          I was able to finish my assignments on time.”
+        </p>
+        <p class="name">— College Student</p>
+      </div>
+      <div class="card">
+        <p class="quote">
+          “Our office computers kept freezing, and TechFix Solutions got us back up and running quickly.
+          The pricing was clear and there were no surprises.”
+        </p>
+        <p class="name">— Small Business Owner</p>
+      </div>
+      <div class="card">
+        <p class="quote">
+          “They repaired my gaming PC and it now runs smoother and quieter than before.
+          I really appreciated the honest advice.”
+        </p>
+        <p class="name">— Gamer</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section id="faq" class="section" aria-labelledby="faq-heading">
+    <h2 id="faq-heading">Frequently Asked Questions</h2>
+    <p class="section-intro">
+      Have questions? Here are answers to some of the most common things people ask us.
+    </p>
+
+    <div class="faq-item">
+      <h3>How long does computer repair take?</h3>
+      <p>
+        Many common repairs can be completed the same day or within 24–48 hours, depending on parts
+        and the complexity of the issue. We will always give you an estimated time once we complete
+        the free diagnostic.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Do you provide a warranty for repairs?</h3>
+      <p>
+        Yes. We offer a 30-day warranty on our repair work and replacement parts.
+        If the same issue returns within 30 days, contact us and we will review it at no extra diagnostic cost.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>What payment methods do you accept?</h3>
+      <p>
+        We accept cash, major credit and debit cards, and common digital payment methods.
+        If you have questions about payment, let us know and we’ll work with you.
+      </p>
+    </div>
+  </section>
+
+  <!-- REFERENCES SECTION -->
+  <section id="references" class="section" aria-labelledby="references-heading">
+    <div class="references">
+      <h2 id="references-heading">References</h2>
+      <p>
+        Atlassian. (n.d.). <em>Calculating the cost of downtime.</em> Atlassian.
+        Retrieved December 1, 2025, from https://www.atlassian.com/incident-management/kpis/cost-of-downtime
+      </p>
+      <p>
+        N-able. (2025, July 2). <em>The true cost of downtime: Why cyber resilience matters.</em> N-able.
+        Retrieved December 1, 2025, from https://www.n-able.com/blog/true-cost-of-downtime
+      </p>
+      <p>
+        SOAX. (2025, August 12). <em>How many devices are connected to the IoT?</em> SOAX Research.
+        Retrieved December 1, 2025, from https://soax.com/research/internet-of-things-growth
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="section" aria-labelledby="contact-heading">
+    <h2 id="contact-heading">Contact TechFix Solutions</h2>
+    <p class="section-intro">
+      Ready to fix your device or have questions about a repair? Reach out today—we’re happy to help.
+    </p>
+
+    <div class="contact-box">
+      <p><strong>TechFix Solutions</strong></p>
+      <p>1234 Evergreen Road<br>San Antonio, TX 78201</p>
+      <p><strong>Phone:</strong> (555) 555-5555</p>
+      <p><strong>Email:</strong> support@techfixsolutions.com</p>
+      <p><strong>Website:</strong> www.TechFixSolutions.com</p>
+      <p style="margin-top: 0.75rem;">
+        You can call, email, or send us a message through our contact form. Please include a brief description
+        of your issue so we can provide the best guidance and an estimated timeline.
+      </p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div>© <span id="year"></span> TechFix Solutions. All rights reserved.</div>
+      <div>PC &amp; Electronic Repair • San Antonio, TX</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
